@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/NoBS.iml" filepath="$PROJECT_DIR$/NoBS.iml" />
+      <module fileurl="file://$PROJECT_DIR$/NoBSRatings.iml" filepath="$PROJECT_DIR$/NoBSRatings.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>

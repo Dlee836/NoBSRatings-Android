@@ -18,10 +18,11 @@ import android.widget.ListView;
 import android.widget.RatingBar;
 import android.widget.Toast;
 
+import java.util.List;
 import java.util.Set;
 
 public class MainActivity extends AppCompatActivity {
-    private String[] mPlanetTitles;
+    private String[] mDrawerTitles = {"A","B","C","D"};
     private DrawerLayout mDrawerLayout;
     private ListView mDrawerList;
 
@@ -32,7 +33,14 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
+        mDrawerList = (ListView) findViewById(R.id.left_drawer);
 
+        // Set the adapter for the list view
+        mDrawerList.setAdapter(new ArrayAdapter<String>(this,
+                R.layout.drawer_list_item, mDrawerTitles));
+        // Set the list's click listener
+        mDrawerList.setOnItemClickListener(new DrawerItemClickListener());
 
         //Set the list view
         businessItemData = new com.nobsratings.nobs.BusinessItem[5];
@@ -68,6 +76,8 @@ public class MainActivity extends AppCompatActivity {
                 view.getContext().startActivity(intent);
             }
         });
-        };
+    }
+
+
 
 }
