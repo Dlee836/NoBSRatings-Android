@@ -77,18 +77,15 @@ public class CategoriesFragment extends Fragment {
 
                 FragmentManager fragmentManager2 = getFragmentManager();
                 FragmentTransaction fragmentTransaction2 = fragmentManager2.beginTransaction();
-                //Replace
-
                 HomeFragment fragment2 = new HomeFragment();
+
                 Bundle bundle = new Bundle();
                 bundle.putInt("hello", position);
                 fragment2.setArguments(bundle);
-                fragmentTransaction2.addToBackStack("xyz");
-                fragmentTransaction2.hide(CategoriesFragment.this);
-                fragmentTransaction2.add(android.R.id.content, fragment2);
-                fragmentTransaction2.commit();
 
-
+                fragmentTransaction2.replace(R.id.FrameLayout, fragment2, fragment2.FRAGMENT_TAG)
+                        .addToBackStack("xyz")
+                        .commit();
             }
         });
 
