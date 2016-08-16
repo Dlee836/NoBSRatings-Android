@@ -37,14 +37,13 @@ public class MainActivity extends BaseActivity {
         //setFragment(new HomeFragment());
         addFragment(R.id.FrameLayout, new HomeFragment(), HomeFragment.FRAGMENT_TAG);
         //Initialize Navigation Drawer
-        new DrawerBuilder().withActivity(this).build();
 
+        new DrawerBuilder().withActivity(this).build();
         PrimaryDrawerItem item1 = new PrimaryDrawerItem().withIdentifier(1).withName("Home");
         SecondaryDrawerItem item2 = (SecondaryDrawerItem) new SecondaryDrawerItem().withIdentifier(2).withName("Rating System");
         SecondaryDrawerItem item3 = (SecondaryDrawerItem) new SecondaryDrawerItem().withIdentifier(3).withName("Categories");
         SecondaryDrawerItem item4 = (SecondaryDrawerItem) new SecondaryDrawerItem().withIdentifier(4).withName("Map");
         SecondaryDrawerItem item5 = (SecondaryDrawerItem) new SecondaryDrawerItem().withIdentifier(5).withName("About Us");
-
 
         //create the drawer and remember the `Drawer` result object
         Drawer result = new DrawerBuilder()

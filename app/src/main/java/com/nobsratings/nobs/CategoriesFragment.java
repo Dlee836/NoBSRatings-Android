@@ -74,9 +74,11 @@ public class CategoriesFragment extends Fragment {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Toast.makeText(view.getContext(), "POSITION: " + position, Toast.LENGTH_SHORT).show();
                 //Replace Fragment
+
                 FragmentManager fragmentManager2 = getFragmentManager();
                 FragmentTransaction fragmentTransaction2 = fragmentManager2.beginTransaction();
                 //Replace
+
                 HomeFragment fragment2 = new HomeFragment();
                 Bundle bundle = new Bundle();
                 bundle.putInt("hello", position);
@@ -85,8 +87,6 @@ public class CategoriesFragment extends Fragment {
                 fragmentTransaction2.hide(CategoriesFragment.this);
                 fragmentTransaction2.add(android.R.id.content, fragment2);
                 fragmentTransaction2.commit();
-
-
 
 
             }
