@@ -1,73 +1,69 @@
 package com.nobsratings.nobs;
 
-import android.content.ClipData;
-import android.content.Intent;
 import android.os.Bundle;
-
-import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.View;
-import android.view.Menu;
-import android.view.MenuItem;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.ListAdapter;
-import android.widget.ListView;
-import android.widget.RatingBar;
-import android.widget.Toast;
 
-import java.util.Set;
+import com.mikepenz.materialdrawer.Drawer;
+import com.mikepenz.materialdrawer.DrawerBuilder;
+import com.mikepenz.materialdrawer.model.DividerDrawerItem;
+import com.mikepenz.materialdrawer.model.PrimaryDrawerItem;
+import com.mikepenz.materialdrawer.model.SecondaryDrawerItem;
+import com.mikepenz.materialdrawer.model.interfaces.IDrawerItem;
 
 public class MainActivity extends AppCompatActivity {
-    private String[] mPlanetTitles;
-    private DrawerLayout mDrawerLayout;
-    private ListView mDrawerList;
-
-    com.nobsratings.nobs.BusinessItem[] businessItemData;
+    Toolbar toolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        //Initialize Toolbar
+        toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar.setTitle("NoBS");
+        setSupportActionBar(toolbar);
+
+        //Initialize Navigation Drawer
+        new DrawerBuilder().withActivity(this).build();
+
+        PrimaryDrawerItem item1 = new PrimaryDrawerItem().withIdentifier(1).withName("Main Menu");
+        SecondaryDrawerItem item2 = (SecondaryDrawerItem) new SecondaryDrawerItem().withIdentifier(2).withName("Our Mission!");
+        SecondaryDrawerItem item3 = (SecondaryDrawerItem) new SecondaryDrawerItem().withIdentifier(2).withName("Categories!");
+        SecondaryDrawerItem item4 = (SecondaryDrawerItem) new SecondaryDrawerItem().withIdentifier(2).withName("Map!");
+        SecondaryDrawerItem item5 = (SecondaryDrawerItem) new SecondaryDrawerItem().withIdentifier(2).withName("About Us!");
 
 
-        //Set the list view
-        businessItemData = new com.nobsratings.nobs.BusinessItem[5];
-        businessItemData[0] = new com.nobsratings.nobs.BusinessItem(1, "MedAscend", "A","A","A","A","N/A","A");
-        businessItemData[1] = new com.nobsratings.nobs.BusinessItem(2, "The Learning Collaborative", "B","B","A","B","NA","B");
-        businessItemData[2] = new com.nobsratings.nobs.BusinessItem(3, "Momentum Tutoring","A","A","A","A","N/A","A");
-        businessItemData[3] = new com.nobsratings.nobs.BusinessItem(4, "Avance", "A+","A+","A","A+","N/A","A+");
-        businessItemData[4] = new com.nobsratings.nobs.BusinessItem(5, "Justin the Tutor","A","A","A","A+","N/A","A+");
+        //create the drawer and remember the `Drawer` result object
+        Drawer result = new DrawerBuilder()
+                .withActivity(this)
+                .withToolbar(toolbar)
+                .addDrawerItems(
+                        item1,
+                        new DividerDrawerItem(),
+                        item2,
+                        item3,
+                        item4,
+                        item5
+                )
+                .withSelectedItem(0)
+                .withOnDrawerItemClickListener(new Drawer.OnDrawerItemClickListener() {
+                    @Override
+                    public boolean onItemClick(View view, int position, IDrawerItem drawerItem) {
+                        // do something with the clicked item :D
+                        if (drawerItem != null) {
+                            Long id2 = drawerItem.getIdentifier();
+                            Log.d("^^^", id2.toString());
 
-        com.nobsratings.nobs.ArrayAdapterItem adapter = new com.nobsratings.nobs.ArrayAdapterItem(this, R.layout.business_item, businessItemData);
 
-        ListView businessList = (ListView) this.findViewById(R.id.main_list);
-        businessList.setAdapter(adapter);
-
-        businessList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-//                Object listItem = list.getItemAtPosition(position);
-                Intent intent = new Intent(view.getContext(), com.nobsratings.nobs.BusinessInformationActivity.class);
-
-                Bundle bundle = new Bundle();
-
-                bundle.putInt("businessId", businessItemData[position].businessId);
-                bundle.putString("businessName", businessItemData[position].businessName);
-                bundle.putString("r1", businessItemData[position].r1);
-                bundle.putString("r2", businessItemData[position].r2);
-                bundle.putString("r3", businessItemData[position].r3);
-                bundle.putString("r4", businessItemData[position].r4);
-                bundle.putString("r5", businessItemData[position].r5);
-                bundle.putString("rf", businessItemData[position].rf);
-
-                intent.putExtras(bundle);
-                view.getContext().startActivity(intent);
-            }
-        });
-        };
+                        }
+                        return false;
+                    }
+                })
+                .withFireOnInitialOnClick(true)
+                .build();
+    };
 
 }
