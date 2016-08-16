@@ -13,4 +13,12 @@
         app:titleTextColor="@color/accent">
     </android.support.v7.widget.Toolbar>
 
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/FrameLayout"
+        android:layout_below="@+id/toolbar">
+
+    </FrameLayout>
+
 </RelativeLayout>
