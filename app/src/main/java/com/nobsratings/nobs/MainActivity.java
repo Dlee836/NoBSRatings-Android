@@ -20,7 +20,7 @@ import com.mikepenz.materialdrawer.model.PrimaryDrawerItem;
 import com.mikepenz.materialdrawer.model.SecondaryDrawerItem;
 import com.mikepenz.materialdrawer.model.interfaces.IDrawerItem;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends BaseActivity {
     Toolbar toolbar;
 
     @Override
@@ -29,14 +29,13 @@ public class MainActivity extends AppCompatActivity {
 
         setContentView(R.layout.activity_main);
 
-        //setFragment(new HomeFragment());
-        addFragment(R.id.FrameLayout, new HomeFragment(), HomeFragment.FRAGMENT_TAG);
-
         //Initialize Toolbar
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         toolbar.setTitle("NoBS");
         setSupportActionBar(toolbar);
 
+        //setFragment(new HomeFragment());
+        addFragment(R.id.FrameLayout, new HomeFragment(), HomeFragment.FRAGMENT_TAG);
         //Initialize Navigation Drawer
         new DrawerBuilder().withActivity(this).build();
 
@@ -100,36 +99,5 @@ public class MainActivity extends AppCompatActivity {
 
 
     }//
-    protected void addFragment(@IdRes int containerViewId, @NonNull Fragment fragment, @NonNull String fragmentTag)
-    {
-        getSupportFragmentManager()
-                .beginTransaction()
-                .add(containerViewId, fragment, fragmentTag)
-                .disallowAddToBackStack()
-                .commit();
-    }
-
-    public void onFragmentInteraction(Uri uri){
-        //you can leave it empty
-    }
-
-    protected void replaceFragment (@IdRes int containerViewId,
-    @NonNull Fragment fragment,
-    @NonNull String fragmentTag,
-    @Nullable String backStackStateName) {
-        getSupportFragmentManager()
-                .beginTransaction()
-                .replace(containerViewId, fragment, fragmentTag)
-                .addToBackStack(backStackStateName)
-                .commit();
-    }
-
-    protected void setFragment(Fragment fragment) {
-        FragmentManager fragmentManager = getSupportFragmentManager();
-        FragmentTransaction fragmentTransaction =
-                fragmentManager.beginTransaction();
-        fragmentTransaction.replace(android.R.id.content, fragment);
-        fragmentTransaction.commit();
-    }
 
 }//end
