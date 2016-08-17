@@ -44,6 +44,7 @@ public class MainActivity extends BaseActivity {
         SecondaryDrawerItem item3 = (SecondaryDrawerItem) new SecondaryDrawerItem().withIdentifier(3).withName("Categories");
         SecondaryDrawerItem item4 = (SecondaryDrawerItem) new SecondaryDrawerItem().withIdentifier(4).withName("Map");
         SecondaryDrawerItem item5 = (SecondaryDrawerItem) new SecondaryDrawerItem().withIdentifier(5).withName("About Us");
+        SecondaryDrawerItem item6 = (SecondaryDrawerItem) new SecondaryDrawerItem().withIdentifier(6).withName("What We Do");
 
         //create the drawer and remember the `Drawer` result object
         Drawer result = new DrawerBuilder()
@@ -52,6 +53,7 @@ public class MainActivity extends BaseActivity {
                 .addDrawerItems(
                         item1,
                         new DividerDrawerItem(),
+                        item6,
                         item2,
                         item3,
                         item4,
@@ -62,7 +64,7 @@ public class MainActivity extends BaseActivity {
                     @Override
                     public boolean onItemClick(View view, int position, IDrawerItem drawerItem) {
                         // do something with the clicked item :D
-                        Log.d("^^^", drawerItem.getIdentifier()+ " " + position);
+                        Log.d("^^^", drawerItem.getIdentifier() + " " + position);
                         //Get Drawer ID
                         int id = (int) drawerItem.getIdentifier();
 
@@ -85,6 +87,8 @@ public class MainActivity extends BaseActivity {
                             } else if (id == 5) {
                                 replaceFragment(R.id.FrameLayout, new AboutUsFragment(), AboutUsFragment.FRAGMENT_TAG, null);
 
+                            } else if (id == 6) {
+                                replaceFragment(R.id.FrameLayout, new WhatWeDoFragment(), WhatWeDoFragment.FRAGMENT_TAG, null);
                             }
 
 
