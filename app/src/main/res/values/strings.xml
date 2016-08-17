@@ -23,7 +23,36 @@
     <string name="Members">
         <u>Members</u>
     </string>
-    <string name="titleTextSize">16sp</string>
-    <string name="what_we_do_intro">Empowering people to make purchases that align with their values and in turn, encourage businesses to align their processes with these values to create a better world.</string>
-    <string name="why_are_we_doing_text">We want a world with NO Bullshit- NO child labour, NO pollution, NO inequality. \n\nEveryone has power to create this better world with businesses they choose to support. \n\nBy providing a convenient way for everyone to understand how their purchase impacts society, we empower people to create a better world one purchase at a time.</string>
+
+    <string name="titleTextSize">
+        16sp
+    </string>
+
+    <string name="what_we_do_intro">
+        Empowering people to make purchases that align with their values and in turn, encourage businesses to align their processes with these values to create a better world.
+    </string>
+
+    <string name="why_are_we_doing_text">
+        We want a world with NO Bullshit- NO child labour, NO pollution, NO inequality. \n\nEveryone has power to create this better world with businesses they choose to support. \n\nBy providing a convenient way for everyone to understand how their purchase impacts society, we empower people to create a better world one purchase at a time.
+    </string>
+
+    <string name="the_five_pillars">
+        <u>The Five Pillars</u>
+    </string>
+
+    <string name="how_we_do_it">
+        <u>How We Do it?</u>
+    </string>
+
+    <string name="one_text">
+        Businesses go through a rating interview to \ncollect information about their practices
+    </string>
+
+    <string name="two_text">
+        Businesses provide supporting documents to verify\ninformation provided in the interview
+    </string>
+
+    <string name="three_text">
+        Information is inputted to our algorithm in\norder to produce the NoBS rating
+    </string>
 </resources>

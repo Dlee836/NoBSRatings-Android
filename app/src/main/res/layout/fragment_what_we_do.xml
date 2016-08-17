@@ -13,7 +13,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/top_box"
-            android:background="@color/black">
+            android:background="#1A1A1A">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -44,7 +44,7 @@
                 android:layout_below="@+id/textView"
                 android:layout_centerHorizontal="true"
                 android:layout_marginBottom="10dp"
-                android:id="@+id/imageView"
+                android:id="@+id/no_bullshit"
                 android:src="@drawable/nobsworld"/>
 
         </RelativeLayout>
@@ -72,7 +72,7 @@
                 android:textAppearance="?android:attr/textAppearanceSmall"
                 android:text="@string/why_are_we_doing_text"
                 android:id="@+id/textView4"
-                android:textColor="@color/black"
+                android:textColor="#1A1A1A"
                 android:textAlignment="center"
                 android:layout_margin="10dp"
                 android:layout_below="@+id/what_are_we_doing_heading"/>
@@ -82,7 +82,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/what_are_we_doing_box"
-            android:background="@color/black"
+            android:background="#1A1A1A"
             android:id="@+id/our_rating_process_box">
 
 
@@ -95,19 +95,21 @@
                 android:textColor="@color/white"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="15dp"
-                android:id="@+id/our_rating_process_heading" />
+                android:id="@+id/our_rating_process_heading"
+                android:textStyle="bold"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="The Five Pillars"
+                android:text="@string/the_five_pillars"
                 android:textColor="@color/white"
                 android:layout_centerHorizontal="true"
                 android:textAllCaps="true"
                 android:layout_below="@id/our_rating_process_heading"
                 android:id="@+id/five_pillars_text"
-                android:layout_margin="10dp"/>
+                android:layout_margin="10dp"
+                android:textStyle="bold"/>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -152,44 +154,151 @@
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceSmall"
                 android:text="Local Community Engagement"
-                android:id="@+id/community_text" />
+                android:id="@+id/community_text"
+                android:layout_below="@id/community_image"
+                android:textColor="@color/white"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="10dp"/>
 
             <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/handshake_image" />
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:id="@+id/handshake_image"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="10dp"
+                android:layout_below="@id/community_text"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceSmall"
                 android:text="Fair Trade"
-                android:id="@+id/handshake_text" />
+                android:id="@+id/handshake_text"
+                android:textColor="@color/white"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="10dp"
+                android:layout_below="@id/handshake_image"/>
 
             <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/labour_image" />
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:id="@+id/labour_image"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="10dp"
+                android:layout_below="@id/handshake_text"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceSmall"
                 android:text="Labour Conditions"
-                android:id="@+id/labour_text" />
+                android:id="@+id/labour_text"
+                android:textColor="@color/white"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="10dp"
+                android:layout_below="@id/labour_image"/>
 
             <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/like_image" />
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:id="@+id/like_image"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="10dp"
+                android:layout_below="@id/labour_text"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceSmall"
                 android:text="Pro-Consumer Behaviour"
-                android:id="@+id/like_text" />
+                android:id="@+id/like_text"
+                android:textColor="@color/white"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="10dp"
+                android:layout_below="@id/like_image"/>
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="@string/how_we_do_it"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:layout_centerHorizontal="true"
+                android:textStyle="bold"
+                android:layout_below="@id/like_text"
+                android:layout_margin="10dp"
+                android:id="@+id/how_we_do_it" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="As easy as 1,2,3:"
+                android:layout_below="@id/how_we_do_it"
+                android:textColor="@color/white"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/one_two_three" />
+
+            <ImageView
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:id="@+id/image_one"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/one_two_three"
+                android:layout_margin="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_below="@id/image_one"
+                android:textColor="@color/white"
+                android:layout_centerHorizontal="true"
+                android:textAlignment="center"
+                android:text="@string/one_text"
+                android:id="@+id/text_one"
+                android:layout_margin="10dp"/>
+
+            <ImageView
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:id="@+id/image_two"
+                android:layout_below="@id/text_one"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="@string/two_text"
+                android:textColor="@color/white"
+                android:layout_below="@id/image_two"
+                android:textAlignment="center"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="10dp"
+                android:id="@+id/text_two" />
+
+            <ImageView
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_below="@id/text_two"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="10dp"
+                android:id="@+id/image_three" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="@string/three_text"
+                android:textColor="@color/white"
+                android:layout_centerHorizontal="true"
+                android:textAlignment="center"
+                android:layout_below="@id/image_three"
+                android:layout_margin="10dp"
+                android:id="@+id/text_three" />
 
         </RelativeLayout>
     </RelativeLayout>
