@@ -77,10 +77,10 @@ public class CategoriesFragment extends Fragment {
 
                 FragmentManager fragmentManager2 = getFragmentManager();
                 FragmentTransaction fragmentTransaction2 = fragmentManager2.beginTransaction();
-                HomeFragment fragment2 = new HomeFragment();
+                CompaniesFragment fragment2 = new CompaniesFragment();
 
                 Bundle bundle = new Bundle();
-                bundle.putInt("hello", position);
+                bundle.putInt("categoryId", position);
                 fragment2.setArguments(bundle);
 
                 fragmentTransaction2.replace(R.id.FrameLayout, fragment2, fragment2.FRAGMENT_TAG)
