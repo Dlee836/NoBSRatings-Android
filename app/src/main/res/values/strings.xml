@@ -1,5 +1,29 @@
 <resources>
     <string name="app_name">NoBS</string>
-    <string name="drawer_open">Open</string>
-    <string name="drawer_close">Close</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="whatText">A world where there is no corporate bullshit,
+        a world where we all know what we are buying. That’s the world that noBS ratings wants. \n\n
+        Our rating system gives the power back to consumers by providing them with information
+        about the social and ethical impact of the businesses they support</string>
+    <string name="whoText">
+        We were formed over the 15/16 summer as we went through the Live the Dream social entrepreneurship accelerator program.
+        At our core is the Nobs community, the changemakers that use our ratings. \n\n
+        The core team is a bunch of university students that share our passion to eliminate the bullshit!
+    </string>
+    <string name="WhoWeAre">
+        <u>Who We Are</u>
+    </string>
+
+    <string name="WhatWeDo">
+        <u>Our Mission</u>
+    </string>
+
+    <string name="Members">
+        <u>Members</u>
+    </string>
+    <string name="titleTextSize">16sp</string>
+    <string name="what_we_do_intro">Empowering people to make purchases that align with their values and in turn, encourage businesses to align their processes with these values to create a better world.</string>
+    <string name="why_are_we_doing_text">We want a world with NO Bullshit- NO child labour, NO pollution, NO inequality. \n\nEveryone has power to create this better world with businesses they choose to support. \n\nBy providing a convenient way for everyone to understand how their purchase impacts society, we empower people to create a better world one purchase at a time.</string>
 </resources>

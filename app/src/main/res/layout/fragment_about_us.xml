@@ -1,0 +1,101 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context="com.nobsratings.nobs.AboutUsFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/RelativeView">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/titleBox"
+            android:background="@color/md_grey_300">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/WhatWeDo"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:id="@+id/titleText"
+                android:textColor="@color/black"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/impactText"
+                android:layout_below="@id/titleText"
+                android:layout_margin="10dp"
+                android:textColor="@color/black"
+                android:gravity="center_horizontal"
+                android:text="@string/whatText" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/titleBox"
+            android:id="@+id/membersBox"
+            android:background="@color/md_grey_200">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/WhoWeAre"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:id="@+id/membersTitleText"
+                android:textColor="@color/black"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/membersText"
+                android:layout_margin="10dp"
+                android:gravity="center_horizontal"
+                android:textColor="@color/black"
+                android:text="@string/whoText"
+                android:layout_below="@id/membersTitleText"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/membersBox2"
+            android:layout_below="@+id/membersBox"
+            android:background="@color/md_blue_grey_100">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Members"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:id="@+id/membersTitle"
+                android:textColor="@color/black"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/membersTitle"
+                android:orientation="vertical"
+                android:id="@+id/memberLinearLayout">
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+</ScrollView>
