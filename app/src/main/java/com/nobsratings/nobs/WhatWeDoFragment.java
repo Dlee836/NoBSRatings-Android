@@ -72,25 +72,25 @@ public class WhatWeDoFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_what_we_do, container, false);
-        mNoBS = (ImageView)view.findViewById(R.id.no_bullshit);
-        mEnvironment = (ImageView)view.findViewById(R.id.environment_image);
-        mCommunity = (ImageView)view.findViewById(R.id.community_image);
-        mHandshake = (ImageView)view.findViewById(R.id.handshake_image);
-        mLabour = (ImageView)view.findViewById(R.id.labour_image);
-        mLike = (ImageView)view.findViewById(R.id.like_image);
-        mOne = (ImageView)view.findViewById(R.id.image_one);
-        mTwo = (ImageView)view.findViewById(R.id.image_two);
-        mThree = (ImageView)view.findViewById(R.id.image_three);
-
-        Picasso.with(getContext()).load("http://www.nobsratings.org/wp-content/uploads/2016/02/nobsworld-300x300.png").into(mNoBS);
-        Picasso.with(getContext()).load("http://www.nobsratings.org/wp-content/uploads/2016/02/enviroicon-copy-150x150.png").into(mEnvironment);
-        Picasso.with(getContext()).load("http://www.nobsratings.org/wp-content/uploads/2016/02/commicon-copy-150x150.png").into(mCommunity);
-        Picasso.with(getContext()).load("http://www.nobsratings.org/wp-content/uploads/2016/02/fairtradeicon-copy-150x150.png").into(mHandshake);
-        Picasso.with(getContext()).load("http://www.nobsratings.org/wp-content/uploads/2016/02/labouricon-150x150.png").into(mLabour);
-        Picasso.with(getContext()).load("http://www.nobsratings.org/wp-content/uploads/2016/02/proconsicon-copy-150x150.png").into(mLike);
-        Picasso.with(getContext()).load("http://www.nobsratings.org/wp-content/uploads/2016/02/collect.png").into(mOne);
-        Picasso.with(getContext()).load("http://www.nobsratings.org/wp-content/uploads/2016/02/verify.png").into(mTwo);
-        Picasso.with(getContext()).load("http://www.nobsratings.org/wp-content/uploads/2016/02/calculate.png").into(mThree);
+//        mNoBS = (ImageView)view.findViewById(R.id.no_bullshit);
+//        mEnvironment = (ImageView)view.findViewById(R.id.environment_image);
+//        mCommunity = (ImageView)view.findViewById(R.id.community_image);
+//        mHandshake = (ImageView)view.findViewById(R.id.handshake_image);
+//        mLabour = (ImageView)view.findViewById(R.id.labour_image);
+//        mLike = (ImageView)view.findViewById(R.id.like_image);
+//        mOne = (ImageView)view.findViewById(R.id.image_one);
+//        mTwo = (ImageView)view.findViewById(R.id.image_two);
+//        mThree = (ImageView)view.findViewById(R.id.image_three);
+//
+//        Picasso.with(getContext()).load("http://www.nobsratings.org/wp-content/uploads/2016/02/nobsworld-300x300.png").into(mNoBS);
+//        Picasso.with(getContext()).load("http://www.nobsratings.org/wp-content/uploads/2016/02/enviroicon-copy-150x150.png").into(mEnvironment);
+//        Picasso.with(getContext()).load("http://www.nobsratings.org/wp-content/uploads/2016/02/commicon-copy-150x150.png").into(mCommunity);
+//        Picasso.with(getContext()).load("http://www.nobsratings.org/wp-content/uploads/2016/02/fairtradeicon-copy-150x150.png").into(mHandshake);
+//        Picasso.with(getContext()).load("http://www.nobsratings.org/wp-content/uploads/2016/02/labouricon-150x150.png").into(mLabour);
+//        Picasso.with(getContext()).load("http://www.nobsratings.org/wp-content/uploads/2016/02/proconsicon-copy-150x150.png").into(mLike);
+//        Picasso.with(getContext()).load("http://www.nobsratings.org/wp-content/uploads/2016/02/collect.png").into(mOne);
+//        Picasso.with(getContext()).load("http://www.nobsratings.org/wp-content/uploads/2016/02/verify.png").into(mTwo);
+//        Picasso.with(getContext()).load("http://www.nobsratings.org/wp-content/uploads/2016/02/calculate.png").into(mThree);
 
         return view;
     }
