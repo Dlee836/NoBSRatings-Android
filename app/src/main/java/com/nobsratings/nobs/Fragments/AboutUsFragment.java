@@ -4,6 +4,7 @@ import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,6 +12,10 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.firebase.client.DataSnapshot;
+import com.firebase.client.Firebase;
+import com.firebase.client.FirebaseError;
+import com.firebase.client.ValueEventListener;
 import com.nobsratings.nobs.BuildConfig;
 import com.nobsratings.nobs.Member;
 import com.nobsratings.nobs.R;
@@ -55,45 +60,38 @@ public class AboutUsFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_about_us, container, false);
         this.mView = view;
 
-        ArrayList<Member> memberArray = new ArrayList<>();
+        final LinearLayout ll = (LinearLayout)view.findViewById(R.id.memberLinearLayout);
+        final LayoutInflater tempInflater = LayoutInflater.from(getContext());
 
-        String m1Name = "SAM YOON – CHIEF STORYTELLER";
-        String m2Name = "MILDRED WONG – OPERATIONS BRAIN";
-        String m3Name = "MAX ROGERS – PARTNERS MANAGER";
+        Firebase myFirebaseRef = new Firebase("https://nobs-ratings.firebaseio.com/");
+        myFirebaseRef.child("Members").addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                for(DataSnapshot dsp : dataSnapshot.getChildren()) {
+                    View tempView = tempInflater.inflate(R.layout.member_item, ll, false);
+                    TextView mName = (TextView) tempView.findViewById(R.id.memberName);
+                    TextView mDesc = (TextView) tempView.findViewById(R.id.memberDescription);
+                    ImageView mPhoto = (ImageView) tempView.findViewById(R.id.memberPhoto);
 
-        String m1Desc = "I'm a good boy";
-        String m2Desc = "I'm a good girl";
-        String m3Desc = "I'm a good boy";
+                    String name = (String) dsp.child("name").getValue();
+                    String imageUrl = (String) dsp.child("imageUrl").getValue();
+                    String desc = (String) dsp.child("aboutText").getValue();
 
-        String m1Photo ="http://www.nobsratings.org/wp-content/uploads/2016/02/Sam-1-e1456625951940.png";
-        String m2Photo ="http://www.nobsratings.org/wp-content/uploads/2016/02/Mildred-e1456625902825.png";
-        String m3Photo ="http://www.nobsratings.org/wp-content/uploads/2016/02/Max-e1456627381198.png";
+                    mName.setText(name);
+                    Picasso.with(getContext()).load(imageUrl).into(mPhoto);
+                    mDesc.setText(desc);
 
-        Member m1 = new Member(m1Name, m1Desc, m1Photo);
-        Member m2 = new Member(m2Name, m2Desc, m3Photo);
-        Member m3 = new Member(m3Name, m2Desc, m3Photo);
+                    ll.addView(tempView);
 
-        memberArray.add(m1);
-        memberArray.add(m2);
-        memberArray.add(m3);
+                }
+            }
 
+            @Override
+            public void onCancelled(FirebaseError firebaseError) {
+                System.out.println("The read failed: " + firebaseError.getMessage());
 
-        LinearLayout ll = (LinearLayout)view.findViewById(R.id.memberLinearLayout);
-        LayoutInflater tempInflater = LayoutInflater.from(getContext());
-        for (int i=0; i<5; i++) {
-
-            View tempView = tempInflater.inflate(R.layout.member_item, ll, false);
-            TextView mName = (TextView) tempView.findViewById(R.id.memberName);
-            TextView mDesc = (TextView) tempView.findViewById(R.id.memberDescription);
-            ImageView mPhoto = (ImageView) tempView.findViewById(R.id.memberPhoto);
-
-            mName.setText("SAM YOON – CHIEF STORYTELLER");
-            mDesc.setText("Sam has always been passionate about how to make the world a better place. As a Law and Economics student at the University of Auckland his favourite hobby is to sleep.");
-            Picasso.with(getContext()).load("http://www.nobsratings.org/wp-content/uploads/2016/02/Sam-1-e1456625951940.png").into(mPhoto);
-
-            ll.addView(tempView);
-
-        }
+            }
+        });
 
         return this.mView;
     }

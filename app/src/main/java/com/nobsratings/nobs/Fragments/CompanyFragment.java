@@ -59,7 +59,6 @@ public class CompanyFragment extends Fragment {
         //FireBase Stuff
         Firebase myFirebaseRef = new Firebase("https://nobs-ratings.firebaseio.com/");
 
-
         final TextView companyTitleText = (TextView) view.findViewById(R.id.companyTitleText);
         final TextView aboutTextView = (TextView) view.findViewById(R.id.aboutTextDetail);
         final ImageView companyImage = (ImageView) view.findViewById(R.id.companyImage);
