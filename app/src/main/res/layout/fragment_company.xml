@@ -2,19 +2,175 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.nobsratings.nobs.CompanyFragment">
+    tools:context=".Fragments.CompanyFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <ImageView
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:id="@+id/companyImage"
-        android:layout_gravity="center"/>
-
-    <TextView
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment"
-        android:id="@+id/companyTextView"/>
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/black">
+            <com.nobsratings.nobs.SquaredImageView
+                android:id="@+id/companyImage"
+                android:layout_width="match_parent"
+                android:layout_height="200dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Example Company"
+                android:textColor="@color/white"
+                android:paddingTop="10dp"
+                android:textSize="20dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/companyImage"
+                android:id="@+id/companyTitleText"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/companyTitleText"
+                android:padding="15dp"
+                android:id="@+id/mainBox">
+
+                <RelativeLayout
+                    android:layout_width="190dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/categoryTitleBox">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/category1text"
+                        android:textColor="@color/white"
+                        android:id="@+id/category1"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/category2"
+                        android:textColor="@color/white"
+                        android:text="@string/category2text"
+                        android:layout_below="@id/category1"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/category3"
+                        android:textColor="@color/white"
+                        android:text="@string/category3text"
+
+                        android:layout_below="@+id/category2"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/category4"
+                        android:textColor="@color/white"
+                        android:text="@string/category4text"
+
+                        android:layout_below="@+id/category3"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/category4"
+                        android:textColor="@color/white"
+                        android:text="@string/category5text"
+                        android:id="@+id/category5"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/categoryTitleBox"
+                    android:id="@+id/ratingBox">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:text="A+"
+                        android:id="@+id/rating1"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:layout_below="@id/rating1"
+                        android:text="A+"
+                        android:id="@+id/rating2"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/rating2"
+                        android:textColor="@color/white"
+                        android:text="A+"
+                        android:id="@+id/rating3"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:layout_below="@+id/rating3"
+                        android:text="A+"
+                        android:id="@+id/rating4"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:layout_below="@+id/rating4"
+                        android:text="A+"
+                        android:id="@+id/rating5"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/finalGradeBox"
+                    android:layout_toRightOf="@+id/ratingBox"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:text="A+"
+                        android:paddingLeft="10dp"
+                        android:id="@+id/ratingf"
+                        android:layout_centerVertical="true"
+                        android:layout_centerHorizontal="true"
+                        android:textSize="75sp"/>
+
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="15dp"
+                android:layout_below="@+id/mainBox">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="About this company:"
+                    android:textColor="@color/white"
+                    android:layout_centerHorizontal="true"
+                    android:id="@+id/aboutText"
+                    android:textSize="20sp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/aboutText"
+                    android:textColor="@color/white"
+                    android:id="@+id/aboutTextDetail"
+                    android:text="TLC mobilizes a network of outstanding university aged coaches and tutors. Having been there recently ourselves, we understand the challenges facing students, making our team relatable, versatile and effective.
+
+We place huge emphasis on holistic learning, and offer more than just support your homework. We'll help you to develop a self-aware, sustainable learning style early on, to prepare you for a lifetime of learning.
+
+Our business model revolves around ensuring genuinely affordable access to all young kiwis and their families through subsidies. No matter your circumstances, we will do our best to help get you where you want to go."/>
+            </RelativeLayout>
+
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+
 
 </FrameLayout>

@@ -55,4 +55,11 @@
     <string name="three_text">
         Information is inputted to our algorithm in\norder to produce the NoBS rating
     </string>
+
+
+    <string name="category1text">Environment</string>
+    <string name="category2text">Pro-Consumer Behaviour</string>
+    <string name="category3text">Labour Conditions</string>
+    <string name="category4text">Community Engagement</string>
+    <string name="category5text">Fair Trade</string>
 </resources>

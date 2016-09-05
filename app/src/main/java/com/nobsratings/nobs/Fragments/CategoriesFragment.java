@@ -1,4 +1,4 @@
-package com.nobsratings.nobs;
+package com.nobsratings.nobs.Fragments;
 
 import android.content.Context;
 import android.net.Uri;
@@ -14,6 +14,9 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
+
+import com.nobsratings.nobs.BuildConfig;
+import com.nobsratings.nobs.R;
 
 import java.util.ArrayList;
 
@@ -58,7 +61,7 @@ public class CategoriesFragment extends Fragment {
 
         //Initialize dummy data
         final ArrayList<String> list = new ArrayList<String>();
-        String[] values = new String[] {"Cafes and Restaurants","Education", "Other 1", "Other 2", "Etc."};
+        String[] values = new String[] {"Education","Cafes and Restaurants", "Other"};
         for (int i=0; i<values.length; i++) {
             list.add(values[i]);
         }

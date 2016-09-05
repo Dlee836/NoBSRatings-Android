@@ -1,24 +1,20 @@
 package com.nobsratings.nobs;
 
-import android.net.Uri;
 import android.os.Bundle;
-import android.support.annotation.IdRes;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentTransaction;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
 
+import com.firebase.client.Firebase;
 import com.mikepenz.materialdrawer.Drawer;
 import com.mikepenz.materialdrawer.DrawerBuilder;
 import com.mikepenz.materialdrawer.model.DividerDrawerItem;
 import com.mikepenz.materialdrawer.model.PrimaryDrawerItem;
 import com.mikepenz.materialdrawer.model.SecondaryDrawerItem;
 import com.mikepenz.materialdrawer.model.interfaces.IDrawerItem;
+import com.nobsratings.nobs.Fragments.AboutUsFragment;
+import com.nobsratings.nobs.Fragments.CategoriesFragment;
+import com.nobsratings.nobs.Fragments.HomeFragment;
 
 public class MainActivity extends BaseActivity {
     Toolbar toolbar;
@@ -26,6 +22,10 @@ public class MainActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        //Initialize Firebase
+        Firebase.setAndroidContext(this);
+        Firebase rootRef = new Firebase("https://nobs-ratings.firebaseio.com/");
 
         setContentView(R.layout.activity_main);
 

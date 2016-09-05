@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "934343939885",
+    "firebase_url": "https://nobs-ratings.firebaseio.com",
+    "project_id": "nobs-ratings",
+    "storage_bucket": "nobs-ratings.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:934343939885:android:0d0c107d40c2e591",
+        "android_client_info": {
+          "package_name": "com.nobsratings.nobs"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "934343939885-0h5g5197r47m3stm9gkomqsnporgtr3q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCWGJZ0wLCko3kXgNB6BcL4UTBGbf8Wv4U"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

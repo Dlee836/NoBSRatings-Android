@@ -1,7 +1,6 @@
-package com.nobsratings.nobs;
+package com.nobsratings.nobs.Fragments;
 
 import android.content.Context;
-import android.media.Image;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -12,9 +11,10 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.nobsratings.nobs.BuildConfig;
+import com.nobsratings.nobs.Member;
+import com.nobsratings.nobs.R;
 import com.squareup.picasso.Picasso;
-
-import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 

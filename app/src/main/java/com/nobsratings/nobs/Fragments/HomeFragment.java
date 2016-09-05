@@ -1,4 +1,4 @@
-package com.nobsratings.nobs;
+package com.nobsratings.nobs.Fragments;
 
 import android.content.Context;
 import android.net.Uri;
@@ -8,6 +8,9 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.nobsratings.nobs.BuildConfig;
+import com.nobsratings.nobs.R;
 
 
 public class HomeFragment extends Fragment {
